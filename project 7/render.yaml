@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: purchase-portal-api
+    env: node
+    buildCommand: npm install
+    startCommand: npm run server
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://admin:admin@rentkar01.fsknlky.mongodb.net/payment_tracker?retryWrites=true&w=majority
+      - key: PORT
+        value: 8080
